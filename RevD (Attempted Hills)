@@ -1,0 +1,134 @@
+function preload(){
+//img1 =loadImage("Two_Point Perspective test.png")}
+img2 =loadImage("drew2.jpg")}
+
+
+
+function setup() {
+  createCanvas(400,300);
+}
+// Print coords based on where mouse click is
+	function mousePressed() {
+  	print("mouseX=", mouseX, "mouseY=", mouseY);
+}
+
+function draw() {
+background(220);
+//image(img1,0,0,400,300);
+	image(img2,0,0,400,300);
+	
+//Hills in background
+	strokeWeight(1)
+beginShape();
+	fill(35,144,79);
+	curveVertex(0,147);//*
+	curveVertex(0,147);//*
+	curveVertex(5,147);
+	curveVertex(14,141);
+	curveVertex(27,133);
+	curveVertex(34,131);
+	curveVertex(39,129);
+	curveVertex(49,130);
+	curveVertex(59,135);
+	curveVertex(71,143);
+	curveVertex(91,151);
+	curveVertex(103,152);
+	curveVertex(103,152);
+endShape();
+beginShape();
+	curveVertex(73,143);
+	curveVertex(73,143);
+	curveVertex(90,137);
+	curveVertex(95,130);
+	curveVertex(105,132);
+	curveVertex(110,129);
+	curveVertex(118,128);
+	curveVertex(151,155);
+	curveVertex(151,155);
+endShape();
+	
+	
+//BOTTOM --> UP	
+	
+	fill (179,179,179);
+	
+	
+	
+	// Base walls (left and right)
+	strokeWeight (0);
+	quad (219,290,217,216,200,210,200,276);
+	quad (219,288,217,216,299,182,300,221);
+	quad (180,204,180,260,93,204,93,173);
+	
+	//Ramp (leftside)
+	strokeWeight (1);
+	quad (203,197,220,203,170,300,152,282);
+	triangle (181,233,200,200,180,204)
+	triangle (199,246,170,300,200,277);
+
+		
+	// Lower platform
+	strokeWeight (0);
+	quad (217,216,200,210,280,180,299,182);
+	quad (220,203,280,180,230,172,166,185);
+	quad (203,197,180,204,93,173,118,171);
+	quad (166,185,118,171,143,170,190,180);
+	quad (201,212,215,217,212,251,201,243);//This is for coverage of extra line
+		
+	
+
+	//Start doing the stroke lines here!
+	strokeWeight(1);
+	line (180,204,93,173);
+	line (93,173,93,204);
+	line (220,203,200,211);
+	line (200,211,217,217);
+	line (217,217,300,182);
+	line (217,217,219,289);
+	line (219,289,200,277);
+	line (200,211,200,277);
+	line (299,182,300,221);
+	line (93,173,150,169); //Right back line
+	line (299,182,230,172); //Left back line
+	line (93,204,167,254); //Left baseline
+	line (219,288,300,221); //Right baseline
+	
+// Neck (moving up)
+	strokeWeight (1);
+	//right
+	fill(255);
+	quad (188,180,188,121,229,129,230,172);
+	quad (196,178,196,133,223,137,223,173);
+	quad (196,173,216,171,216,141,196,139);
+	line (215,171,223,173);
+	line (216,141,223,137);
+	//left
+	fill (255);
+	quad (188,180,152,171,152,127,188,121);
+	quad (182,159,182,133,159,135,159,157);
+	quad (182,153,166,153,166,140,182,139);
+	line (166,153,159,157);
+	line (159,135,166,140);
+	
+// Upper room
+	fill (255,255,255);
+	quad (188,121,204,115,250,125,229,129); //Underside
+	//Right wall
+	quad (250,125,250,65,204,36,204,114);
+	quad (217,85,226,89,236,85,228,80);
+	quad (236,85,236,30,227,23,226,81);
+	quad (216,85,226,80,227,23,217,30);
+	//Left wall
+	quad (204,115,133,131,132,78,204,36);
+	quad (198,108,198,51,160,70,160,117); //Outer box
+	quad (171,114,160,116,160,70,171,77); //Inner left box
+	quad (198,51,198,63,171,77,160,70);
+
+	
+
+
+
+
+
+
+}
